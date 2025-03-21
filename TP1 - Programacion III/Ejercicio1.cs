@@ -19,8 +19,7 @@ namespace TP1___Programacion_III
 
         private void btnEjercicio1_Click(object sender, EventArgs e)
         {
-            listEjercicio1.Items.Add(txtEjercicio1.Text);
-            txtEjercicio1.Clear();
+            
         }
     }
 }
