@@ -31,6 +31,7 @@
             this.lblEjercicio1 = new System.Windows.Forms.Label();
             this.txtEjercicio1 = new System.Windows.Forms.TextBox();
             this.btnEjercicio1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblEjercicio1
@@ -67,12 +68,23 @@
             this.btnEjercicio1.UseVisualStyleBackColor = false;
             this.btnEjercicio1.Click += new System.EventHandler(this.btnEjercicio1_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            " "});
+            this.listBox1.Location = new System.Drawing.Point(103, 121);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(233, 277);
+            this.listBox1.TabIndex = 3;
+            // 
             // Ejercicio1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnEjercicio1);
             this.Controls.Add(this.txtEjercicio1);
             this.Controls.Add(this.lblEjercicio1);
@@ -89,5 +101,6 @@
         private System.Windows.Forms.Label lblEjercicio1;
         private System.Windows.Forms.TextBox txtEjercicio1;
         private System.Windows.Forms.Button btnEjercicio1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
