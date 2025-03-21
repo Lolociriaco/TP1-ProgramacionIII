@@ -40,9 +40,10 @@
             this.btnEjercicio3.AutoSize = true;
             this.btnEjercicio3.BackColor = System.Drawing.Color.White;
             this.btnEjercicio3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEjercicio3.Location = new System.Drawing.Point(570, 106);
+            this.btnEjercicio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEjercicio3.Location = new System.Drawing.Point(568, 106);
             this.btnEjercicio3.Name = "btnEjercicio3";
-            this.btnEjercicio3.Size = new System.Drawing.Size(100, 40);
+            this.btnEjercicio3.Size = new System.Drawing.Size(112, 40);
             this.btnEjercicio3.TabIndex = 0;
             this.btnEjercicio3.Text = "EJERCICIO 3";
             this.btnEjercicio3.UseVisualStyleBackColor = false;
@@ -54,9 +55,10 @@
             // 
             this.btnEjercicio2.BackColor = System.Drawing.Color.White;
             this.btnEjercicio2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEjercicio2.Location = new System.Drawing.Point(356, 106);
+            this.btnEjercicio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEjercicio2.Location = new System.Drawing.Point(346, 106);
             this.btnEjercicio2.Name = "btnEjercicio2";
-            this.btnEjercicio2.Size = new System.Drawing.Size(100, 40);
+            this.btnEjercicio2.Size = new System.Drawing.Size(114, 40);
             this.btnEjercicio2.TabIndex = 1;
             this.btnEjercicio2.Text = "EJERCICIO 2";
             this.btnEjercicio2.UseVisualStyleBackColor = false;
@@ -68,9 +70,10 @@
             // 
             this.btnEjercicio1.BackColor = System.Drawing.Color.White;
             this.btnEjercicio1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEjercicio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEjercicio1.Location = new System.Drawing.Point(123, 106);
             this.btnEjercicio1.Name = "btnEjercicio1";
-            this.btnEjercicio1.Size = new System.Drawing.Size(100, 40);
+            this.btnEjercicio1.Size = new System.Drawing.Size(110, 40);
             this.btnEjercicio1.TabIndex = 2;
             this.btnEjercicio1.Text = "EJERCICIO 1";
             this.btnEjercicio1.UseVisualStyleBackColor = false;
@@ -104,7 +107,7 @@
             "Ciriaco Lorenzo",
             "Daglio Diaz Brandon",
             "Cornejo Julian"});
-            this.listBox1.Location = new System.Drawing.Point(186, 239);
+            this.listBox1.Location = new System.Drawing.Point(123, 245);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(284, 140);
             this.listBox1.TabIndex = 4;
