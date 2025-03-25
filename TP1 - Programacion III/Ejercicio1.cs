@@ -41,5 +41,27 @@ namespace TP1___Programacion_III
             }
         }
 
-    }
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (listBox1.SelectedItem != null)
+            {
+                String seleccionTextBox1 = listBox1.SelectedItem.ToString();
+
+
+                listBox2.Items.Add(seleccionTextBox1);
+
+                listBox1.Items.Remove(seleccionTextBox1);
+
+
+            }
+
+
+            }
+        }
 }
