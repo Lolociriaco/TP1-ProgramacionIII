@@ -23,7 +23,7 @@ namespace TP1___Programacion_III
 
             if (nuevoNombre.Length > 0)
             {
-                foreach (string item in listBox1.Items) 
+                foreach (string item in listBox1.Items)
                 {
                     if (item.ToUpper() == nuevoNombre)
                     {
@@ -61,7 +61,47 @@ namespace TP1___Programacion_III
 
             }
 
+        }
 
+        private void BtnPasarTodos_Click(object sender, EventArgs e)
+        {
+            // Comprueba si hay elementos en la lista izquierda
+            if (listBox1.Items.Count > 0)
+            {
+                // Transferimos los elementos de la lista izquierda a la lista derecha
+                TransferirElementos(listBox1, listBox2);
+                // Limpiar la lista izquierda
+                listBox1.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No hay nombres en la lista izquierda para mover.");
             }
         }
-}
+
+        private void TransferirElementos(ListBox origen, ListBox destino)
+        {
+            // Nos movemos de atrás hacia adelante para evitar problemas al eliminar elementos
+            for (int i = origen.Items.Count - 1; i >= 0; i--)
+            {
+                string nombre = origen.Items[i].ToString(); // Convertimos el elemento a string
+
+                // Verificamos si el nombre ya existe en la lista destino, ignorando mayúsculas y minúsculas
+                bool existe = destino.Items.Cast<string>().Any(n => n.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+
+                if (!existe)
+                {
+                    destino.Items.Add(nombre); // Agregamos el nombre si no está en la lista destino
+                    origen.Items.RemoveAt(i);  // Eliminamos el nombre de la lista origen
+                }
+                else
+                {
+                    // Mostramos un mensaje si el nombre ya existe en la lista destino
+                    MessageBox.Show($"El nombre {nombre} ya existe en la lista de la derecha.");
+                }
+            }
+        }
+
+    }
+}      
+
