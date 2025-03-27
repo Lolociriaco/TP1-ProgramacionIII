@@ -21,5 +21,16 @@ namespace TP1___Programacion_III
         {
 
         }
+
+        private void groupBoxFullName_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ejercicio2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormPrincipal formPrincipal = new FormPrincipal(); // Crea una instancia del formulario principal
+            formPrincipal.Show(); // Muestra el formulario principal
+        }
     }
 }
