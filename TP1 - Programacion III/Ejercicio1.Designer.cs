@@ -122,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.BtnPasarTodo);
@@ -134,7 +135,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ejercicio1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Ejercicio 1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ejercicio1_FormClosed);
+            this.Load += new System.EventHandler(this.Ejercicio1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

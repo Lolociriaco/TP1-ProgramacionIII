@@ -15,6 +15,7 @@ namespace TP1___Programacion_III
         public Ejercicio1(FormPrincipal formPrincipal)
         {
             InitializeComponent();
+            
         }
 
         private void btnEjercicio1_Click(object sender, EventArgs e)
@@ -102,6 +103,16 @@ namespace TP1___Programacion_III
             }
         }
 
+        private void Ejercicio1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormPrincipal formPrincipal = new FormPrincipal(); // Crea una instancia del formulario principal
+            formPrincipal.Show(); // Muestra el formulario principal
+        }
+
+        private void Ejercicio1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }      
 
