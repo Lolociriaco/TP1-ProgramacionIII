@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TP1___Programacion_III
 {
     public partial class Ejercicio1 : Form
@@ -15,7 +16,6 @@ namespace TP1___Programacion_III
         public Ejercicio1(FormPrincipal formPrincipal)
         {
             InitializeComponent();
-            
         }
 
         private void btnEjercicio1_Click(object sender, EventArgs e)
@@ -28,7 +28,10 @@ namespace TP1___Programacion_III
                 {
                     if (item.ToUpper() == nuevoNombre)
                     {
-                        MessageBox.Show("El nombre ya ha sido ingresado, intenta con otro.");
+                        MessageBox.Show("El nombre ya ha sido ingresado, intenta con otro.",
+                                      "Nombre duplicado",
+                                      MessageBoxButtons.OK,
+                                      MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -38,81 +41,103 @@ namespace TP1___Programacion_III
             }
             else
             {
-                MessageBox.Show("Ingresa un nombre rey, No dejes el espacio vacío");
+                MessageBox.Show("Ingresa un nombre, no dejes el espacio vacío",
+                              "Campo vacío",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Exclamation);
             }
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (listBox1.SelectedItem != null)
+            // Validación de item seleccionado
+            if (listBox1.SelectedItem == null)
             {
-                String seleccionTextBox1 = listBox1.SelectedItem.ToString();
-
-
-                listBox2.Items.Add(seleccionTextBox1);
-
-                listBox1.Items.Remove(seleccionTextBox1);
-
-
+                MessageBox.Show("Debes seleccionar un nombre de la lista izquierda primero.",
+                              "Selección requerida",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Warning);
+                return;
             }
 
+            string seleccion = listBox1.SelectedItem.ToString();
+
+            // Validación de duplicdos
+            if (listBox2.Items.Cast<string>().Any(item =>
+                item.Equals(seleccion, StringComparison.OrdinalIgnoreCase)))
+            {
+                MessageBox.Show($"El nombre '{seleccion}' ya existe en la lista derecha.",
+                              "Nombre duplicado",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Transferir elemento
+            listBox2.Items.Add(seleccion);
+            listBox1.Items.Remove(seleccion);
         }
 
         private void BtnPasarTodos_Click(object sender, EventArgs e)
         {
-            // Comprueba si hay elementos en la lista izquierda
-            if (listBox1.Items.Count > 0)
+            if (listBox1.Items.Count == 0)
             {
-                // Transferimos los elementos de la lista izquierda a la lista derecha
-                TransferirElementos(listBox1, listBox2);
-                // Limpiar la lista izquierda
-                listBox1.Items.Clear();
+                MessageBox.Show("No hay nombres en la lista izquierda para mover.",
+                              "Lista vacía",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+                return;
             }
-            else
-            {
-                MessageBox.Show("No hay nombres en la lista izquierda para mover.");
-            }
+
+            TransferirElementos(listBox1, listBox2);
         }
 
         private void TransferirElementos(ListBox origen, ListBox destino)
         {
-            // Nos movemos de atrás hacia adelante para evitar problemas al eliminar elementos
+            int transferidos = 0;
+            int duplicados = 0;
+
             for (int i = origen.Items.Count - 1; i >= 0; i--)
             {
-                string nombre = origen.Items[i].ToString(); // Convertimos el elemento a string
-
-                // Verificamos si el nombre ya existe en la lista destino, ignorando mayúsculas y minúsculas
-                bool existe = destino.Items.Cast<string>().Any(n => n.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+                string nombre = origen.Items[i].ToString();
+                bool existe = destino.Items.Cast<string>()
+                    .Any(n => n.Equals(nombre, StringComparison.OrdinalIgnoreCase));
 
                 if (!existe)
                 {
-                    destino.Items.Add(nombre); // Agregamos el nombre si no está en la lista destino
-                    origen.Items.RemoveAt(i);  // Eliminamos el nombre de la lista origen
+                    destino.Items.Add(nombre);
+                    origen.Items.RemoveAt(i);
+                    transferidos++;
                 }
                 else
                 {
-                    // Mostramos un mensaje si el nombre ya existe en la lista destino
-                    MessageBox.Show($"El nombre {nombre} ya existe en la lista de la derecha.");
+                    duplicados++;
                 }
             }
+
+            string mensaje = $"Se transfirieron {transferidos} elementos.";
+            if (duplicados > 0)
+            {
+                mensaje += $"\n{duplicados} elementos no se transfirieron por ser duplicados.";
+            }
+
+            MessageBox.Show(mensaje, "Resultado de transferencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Ejercicio1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormPrincipal formPrincipal = new FormPrincipal(); // Crea una instancia del formulario principal
-            formPrincipal.Show(); // Muestra el formulario principal
+            FormPrincipal formPrincipal = new FormPrincipal();
+            formPrincipal.Show();
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void Ejercicio1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
-}      
-
+}
