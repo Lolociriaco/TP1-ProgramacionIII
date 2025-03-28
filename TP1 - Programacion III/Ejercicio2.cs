@@ -39,5 +39,26 @@ namespace TP1___Programacion_III
             textName.Clear();
             textSurname.Clear();
         }
+
+        private void listBoxEj2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void Deletebutton_Click(object sender, EventArgs e)
+        {
+                string elementoEliminado = listBoxEj2.SelectedItem.ToString(); 
+                listBoxEj2.Items.Remove(listBoxEj2.SelectedItem); 
+                MessageBox.Show("El elemento " + elementoEliminado + " fue eliminado");
+            
+            
+        }
+
     }
 }
