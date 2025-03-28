@@ -43,10 +43,9 @@
             this.lblEjercicio1.BackColor = System.Drawing.Color.DimGray;
             this.lblEjercicio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEjercicio1.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEjercicio1.Location = new System.Drawing.Point(53, 81);
-            this.lblEjercicio1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEjercicio1.Location = new System.Drawing.Point(40, 66);
             this.lblEjercicio1.Name = "lblEjercicio1";
-            this.lblEjercicio1.Size = new System.Drawing.Size(204, 25);
+            this.lblEjercicio1.Size = new System.Drawing.Size(169, 20);
             this.lblEjercicio1.TabIndex = 0;
             this.lblEjercicio1.Text = "Ingrese su nombre: ";
             // 
@@ -55,20 +54,18 @@
             this.txtEjercicio1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtEjercicio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEjercicio1.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEjercicio1.Location = new System.Drawing.Point(323, 79);
-            this.txtEjercicio1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEjercicio1.Location = new System.Drawing.Point(242, 64);
             this.txtEjercicio1.Name = "txtEjercicio1";
-            this.txtEjercicio1.Size = new System.Drawing.Size(332, 29);
+            this.txtEjercicio1.Size = new System.Drawing.Size(250, 24);
             this.txtEjercicio1.TabIndex = 1;
             // 
             // btnEjercicio1
             // 
             this.btnEjercicio1.BackColor = System.Drawing.Color.LimeGreen;
             this.btnEjercicio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEjercicio1.Location = new System.Drawing.Point(700, 75);
-            this.btnEjercicio1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEjercicio1.Location = new System.Drawing.Point(525, 61);
             this.btnEjercicio1.Name = "btnEjercicio1";
-            this.btnEjercicio1.Size = new System.Drawing.Size(143, 37);
+            this.btnEjercicio1.Size = new System.Drawing.Size(107, 30);
             this.btnEjercicio1.TabIndex = 2;
             this.btnEjercicio1.Text = "Agregar";
             this.btnEjercicio1.UseVisualStyleBackColor = false;
@@ -77,32 +74,28 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
             this.listBox1.Items.AddRange(new object[] {
             " "});
-            this.listBox1.Location = new System.Drawing.Point(137, 149);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Location = new System.Drawing.Point(103, 121);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(309, 340);
+            this.listBox1.Size = new System.Drawing.Size(233, 277);
             this.listBox1.TabIndex = 3;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(561, 149);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox2.Location = new System.Drawing.Point(421, 121);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(315, 340);
+            this.listBox2.Size = new System.Drawing.Size(237, 277);
             this.listBox2.TabIndex = 4;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(476, 257);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(357, 209);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 48);
+            this.button1.Size = new System.Drawing.Size(36, 39);
             this.button1.TabIndex = 5;
             this.button1.Text = ">";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,9 +103,10 @@
             // 
             // BtnPasarTodo
             // 
-            this.BtnPasarTodo.Location = new System.Drawing.Point(476, 325);
+            this.BtnPasarTodo.Location = new System.Drawing.Point(357, 264);
+            this.BtnPasarTodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnPasarTodo.Name = "BtnPasarTodo";
-            this.BtnPasarTodo.Size = new System.Drawing.Size(48, 48);
+            this.BtnPasarTodo.Size = new System.Drawing.Size(36, 39);
             this.BtnPasarTodo.TabIndex = 6;
             this.BtnPasarTodo.Text = ">>";
             this.BtnPasarTodo.UseVisualStyleBackColor = true;
@@ -120,11 +114,11 @@
             // 
             // Ejercicio1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnPasarTodo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
@@ -132,7 +126,6 @@
             this.Controls.Add(this.btnEjercicio1);
             this.Controls.Add(this.txtEjercicio1);
             this.Controls.Add(this.lblEjercicio1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ejercicio1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio 1";

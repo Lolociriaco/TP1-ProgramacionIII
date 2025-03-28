@@ -32,5 +32,12 @@ namespace TP1___Programacion_III
             FormPrincipal formPrincipal = new FormPrincipal(); // Crea una instancia del formulario principal
             formPrincipal.Show(); // Muestra el formulario principal
         }
+
+        private void btnAgregarEj2_Click(object sender, EventArgs e)
+        {
+            listBoxEj2.Items.Add(textName.Text + " " + textSurname.Text);
+            textName.Clear();
+            textSurname.Clear();
+        }
     }
 }

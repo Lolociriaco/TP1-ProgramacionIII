@@ -67,5 +67,10 @@ namespace TP1___Programacion_III
             ejercicio3.Show();
             this.Hide();
         }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

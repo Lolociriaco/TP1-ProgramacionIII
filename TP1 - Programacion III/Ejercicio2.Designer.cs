@@ -35,7 +35,10 @@
             this.textSurname = new System.Windows.Forms.TextBox();
             this.groupBoxFullName = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarEj2 = new System.Windows.Forms.Button();
+            this.listBoxEj2 = new System.Windows.Forms.ListBox();
             this.groupBoxFullName.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -92,6 +95,7 @@
             // groupBoxFullName
             // 
             this.groupBoxFullName.BackColor = System.Drawing.Color.Black;
+            this.groupBoxFullName.Controls.Add(this.btnAgregarEj2);
             this.groupBoxFullName.Controls.Add(this.textSurname);
             this.groupBoxFullName.Controls.Add(this.name);
             this.groupBoxFullName.Controls.Add(this.textName);
@@ -109,6 +113,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.Controls.Add(this.listBoxEj2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(408, 25);
@@ -117,6 +122,28 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Elementos";
+            // 
+            // btnAgregarEj2
+            // 
+            this.btnAgregarEj2.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAgregarEj2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEj2.Location = new System.Drawing.Point(153, 288);
+            this.btnAgregarEj2.Name = "btnAgregarEj2";
+            this.btnAgregarEj2.Size = new System.Drawing.Size(131, 38);
+            this.btnAgregarEj2.TabIndex = 5;
+            this.btnAgregarEj2.Text = "Agregar";
+            this.btnAgregarEj2.UseVisualStyleBackColor = false;
+            this.btnAgregarEj2.Click += new System.EventHandler(this.btnAgregarEj2_Click);
+            // 
+            // listBoxEj2
+            // 
+            this.listBoxEj2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxEj2.FormattingEnabled = true;
+            this.listBoxEj2.ItemHeight = 20;
+            this.listBoxEj2.Location = new System.Drawing.Point(37, 42);
+            this.listBoxEj2.Name = "listBoxEj2";
+            this.listBoxEj2.Size = new System.Drawing.Size(291, 284);
+            this.listBoxEj2.TabIndex = 0;
             // 
             // Ejercicio2
             // 
@@ -134,6 +161,7 @@
             this.Load += new System.EventHandler(this.Ejercicio2_Load);
             this.groupBoxFullName.ResumeLayout(false);
             this.groupBoxFullName.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +176,7 @@
         private System.Windows.Forms.TextBox textSurname;
         private System.Windows.Forms.GroupBox groupBoxFullName;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnAgregarEj2;
+        private System.Windows.Forms.ListBox listBoxEj2;
     }
 }
