@@ -35,9 +35,37 @@ namespace TP1___Programacion_III
 
         private void btnAgregarEj2_Click(object sender, EventArgs e)
         {
+            
+
             listBoxEj2.Items.Add(textName.Text + " " + textSurname.Text);
+            OrdenarListBoxAlfabeticamente();
             textName.Clear();
             textSurname.Clear();
+        }
+
+        private void OrdenarListBoxAlfabeticamente()
+        {
+            List<String> Items = new List<string>();
+
+            foreach(String Item in listBoxEj2.Items)
+            {
+                Items.Add(Item);
+
+            }
+
+            //ordenar la Lista alfabeticamente
+            Items.Sort();
+
+            listBoxEj2.Items.Clear();
+
+            foreach (String Item in Items)
+            {
+                listBoxEj2.Items.Add(Item);
+            }
+
+            
+
+
         }
 
         private void listBoxEj2_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,11 +81,16 @@ namespace TP1___Programacion_III
 
         private void Deletebutton_Click(object sender, EventArgs e)
         {
-                string elementoEliminado = listBoxEj2.SelectedItem.ToString(); 
-                listBoxEj2.Items.Remove(listBoxEj2.SelectedItem); 
+            if (listBoxEj2.SelectedItem != null)
+            {
+                string elementoEliminado = listBoxEj2.SelectedItem.ToString();
+                listBoxEj2.Items.Remove(listBoxEj2.SelectedItem);
                 MessageBox.Show("El elemento " + elementoEliminado + " fue eliminado");
-            
-            
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un elemento para eliminar.");
+            }
         }
 
     }
