@@ -60,7 +60,7 @@
             this.groupBoxsexo.Size = new System.Drawing.Size(316, 141);
             this.groupBoxsexo.TabIndex = 5;
             this.groupBoxsexo.TabStop = false;
-            this.groupBoxsexo.Text = "S";
+            this.groupBoxsexo.Text = "Sexo";
             this.groupBoxsexo.Enter += new System.EventHandler(this.groupBoxsexo_Enter);
             // 
             // checkBox1
@@ -90,7 +90,7 @@
             // 
             this.checkBoxsoltero.AutoSize = true;
             this.checkBoxsoltero.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBoxsoltero.Location = new System.Drawing.Point(24, 41);
+            this.checkBoxsoltero.Location = new System.Drawing.Point(20, 41);
             this.checkBoxsoltero.Name = "checkBoxsoltero";
             this.checkBoxsoltero.Size = new System.Drawing.Size(86, 24);
             this.checkBoxsoltero.TabIndex = 2;
@@ -121,7 +121,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Ejercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
+            this.Text = "S";
             this.groupBoxsexo.ResumeLayout(false);
             this.groupBoxsexo.PerformLayout();
             this.groupBoxEstCivil.ResumeLayout(false);
