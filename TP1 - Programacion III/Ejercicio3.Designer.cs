@@ -34,6 +34,8 @@
             this.checkBoxMasculino = new System.Windows.Forms.CheckBox();
             this.checkBoxsoltero = new System.Windows.Forms.CheckBox();
             this.groupBoxEstCivil = new System.Windows.Forms.GroupBox();
+            this.checkedRoles = new System.Windows.Forms.CheckedListBox();
+            this.btnMostrarSeleccion = new System.Windows.Forms.Button();
             this.groupBoxsexo.SuspendLayout();
             this.groupBoxEstCivil.SuspendLayout();
             this.SuspendLayout();
@@ -42,10 +44,10 @@
             // 
             this.checkBoxCasado.AutoSize = true;
             this.checkBoxCasado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBoxCasado.Location = new System.Drawing.Point(20, 41);
-            this.checkBoxCasado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxCasado.Location = new System.Drawing.Point(13, 27);
+            this.checkBoxCasado.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkBoxCasado.Name = "checkBoxCasado";
-            this.checkBoxCasado.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxCasado.Size = new System.Drawing.Size(62, 17);
             this.checkBoxCasado.TabIndex = 3;
             this.checkBoxCasado.Text = "Casado";
             this.checkBoxCasado.UseVisualStyleBackColor = false;
@@ -56,11 +58,11 @@
             this.groupBoxsexo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBoxsexo.Controls.Add(this.checkBoxmujer);
             this.groupBoxsexo.Controls.Add(this.checkBoxMasculino);
-            this.groupBoxsexo.Location = new System.Drawing.Point(199, 155);
-            this.groupBoxsexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxsexo.Location = new System.Drawing.Point(67, 53);
+            this.groupBoxsexo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBoxsexo.Name = "groupBoxsexo";
-            this.groupBoxsexo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxsexo.Size = new System.Drawing.Size(316, 141);
+            this.groupBoxsexo.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBoxsexo.Size = new System.Drawing.Size(211, 92);
             this.groupBoxsexo.TabIndex = 5;
             this.groupBoxsexo.TabStop = false;
             this.groupBoxsexo.Text = "Sexo";
@@ -70,10 +72,10 @@
             // 
             this.checkBoxmujer.AutoSize = true;
             this.checkBoxmujer.BackColor = System.Drawing.Color.White;
-            this.checkBoxmujer.Location = new System.Drawing.Point(16, 41);
-            this.checkBoxmujer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxmujer.Location = new System.Drawing.Point(11, 27);
+            this.checkBoxmujer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkBoxmujer.Name = "checkBoxmujer";
-            this.checkBoxmujer.Size = new System.Drawing.Size(106, 24);
+            this.checkBoxmujer.Size = new System.Drawing.Size(72, 17);
             this.checkBoxmujer.TabIndex = 1;
             this.checkBoxmujer.Text = "Femenino";
             this.checkBoxmujer.UseVisualStyleBackColor = false;
@@ -82,10 +84,10 @@
             // 
             this.checkBoxMasculino.AutoSize = true;
             this.checkBoxMasculino.BackColor = System.Drawing.Color.White;
-            this.checkBoxMasculino.Location = new System.Drawing.Point(16, 92);
-            this.checkBoxMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxMasculino.Location = new System.Drawing.Point(11, 60);
+            this.checkBoxMasculino.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkBoxMasculino.Name = "checkBoxMasculino";
-            this.checkBoxMasculino.Size = new System.Drawing.Size(106, 24);
+            this.checkBoxMasculino.Size = new System.Drawing.Size(74, 17);
             this.checkBoxMasculino.TabIndex = 0;
             this.checkBoxMasculino.Text = "Masculino";
             this.checkBoxMasculino.UseVisualStyleBackColor = false;
@@ -95,10 +97,10 @@
             // 
             this.checkBoxsoltero.AutoSize = true;
             this.checkBoxsoltero.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBoxsoltero.Location = new System.Drawing.Point(20, 82);
-            this.checkBoxsoltero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxsoltero.Location = new System.Drawing.Point(13, 53);
+            this.checkBoxsoltero.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkBoxsoltero.Name = "checkBoxsoltero";
-            this.checkBoxsoltero.Size = new System.Drawing.Size(86, 24);
+            this.checkBoxsoltero.Size = new System.Drawing.Size(59, 17);
             this.checkBoxsoltero.TabIndex = 2;
             this.checkBoxsoltero.Text = "Soltero";
             this.checkBoxsoltero.UseVisualStyleBackColor = false;
@@ -110,24 +112,52 @@
             this.groupBoxEstCivil.Controls.Add(this.checkBoxsoltero);
             this.groupBoxEstCivil.Controls.Add(this.checkBoxCasado);
             this.groupBoxEstCivil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBoxEstCivil.Location = new System.Drawing.Point(705, 155);
-            this.groupBoxEstCivil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxEstCivil.Location = new System.Drawing.Point(497, 53);
+            this.groupBoxEstCivil.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBoxEstCivil.Name = "groupBoxEstCivil";
-            this.groupBoxEstCivil.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxEstCivil.Size = new System.Drawing.Size(334, 141);
+            this.groupBoxEstCivil.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBoxEstCivil.Size = new System.Drawing.Size(223, 92);
             this.groupBoxEstCivil.TabIndex = 6;
             this.groupBoxEstCivil.TabStop = false;
             this.groupBoxEstCivil.Text = "Estado civil";
+            this.groupBoxEstCivil.Enter += new System.EventHandler(this.groupBoxEstCivil_Enter);
+            // 
+            // checkedRoles
+            // 
+            this.checkedRoles.FormattingEnabled = true;
+            this.checkedRoles.Items.AddRange(new object[] {
+            "Data Entry",
+            "Operador de PC",
+            "Programador",
+            "Reparador de PC",
+            "Tester"});
+            this.checkedRoles.Location = new System.Drawing.Point(306, 172);
+            this.checkedRoles.Name = "checkedRoles";
+            this.checkedRoles.Size = new System.Drawing.Size(160, 79);
+            this.checkedRoles.TabIndex = 7;
+            // 
+            // btnMostrarSeleccion
+            // 
+            this.btnMostrarSeleccion.BackColor = System.Drawing.Color.DimGray;
+            this.btnMostrarSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarSeleccion.Location = new System.Drawing.Point(271, 282);
+            this.btnMostrarSeleccion.Name = "btnMostrarSeleccion";
+            this.btnMostrarSeleccion.Size = new System.Drawing.Size(228, 23);
+            this.btnMostrarSeleccion.TabIndex = 8;
+            this.btnMostrarSeleccion.Text = "Mostrar lo que se seleccionó";
+            this.btnMostrarSeleccion.UseVisualStyleBackColor = false;
+            this.btnMostrarSeleccion.Click += new System.EventHandler(this.button1_Click);
             // 
             // Ejercicio3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMostrarSeleccion);
+            this.Controls.Add(this.checkedRoles);
             this.Controls.Add(this.groupBoxEstCivil);
             this.Controls.Add(this.groupBoxsexo);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Ejercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio 3";
@@ -146,5 +176,7 @@
         private System.Windows.Forms.CheckBox checkBoxMasculino;
         private System.Windows.Forms.CheckBox checkBoxsoltero;
         private System.Windows.Forms.GroupBox groupBoxEstCivil;
+        private System.Windows.Forms.CheckedListBox checkedRoles;
+        private System.Windows.Forms.Button btnMostrarSeleccion;
     }
 }

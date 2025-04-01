@@ -16,7 +16,7 @@ namespace TP1___Programacion_III
         {
             InitializeComponent();
             checkBoxmujer.Checked = true; // Marcar el checkbox en femenino al iniciar
-            checkBoxsoltero.Checked = true; // Marcar el checkbox en casado al iniciar
+            checkBoxCasado.Checked = true; // Marcar el checkbox en casado al iniciar
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -40,6 +40,16 @@ namespace TP1___Programacion_III
         }
 
         private void checkBoxsoltero_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxEstCivil_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
