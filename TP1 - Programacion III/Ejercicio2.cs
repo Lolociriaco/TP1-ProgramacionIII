@@ -49,6 +49,24 @@ namespace TP1___Programacion_III
                 return;
             }
 
+            // Validar que el nombre y apellido ingresado no existan en la lista y validar tambien que no se repita el nombre y apellido corroborando mayusculas y minusculas
+            bool exists = false;
+            foreach (string item in listBoxEj2.Items)
+            {
+                //Recorre la lista y verifica los datos ingresados (concatenados) con los datos de la lista
+                if (item == textName.Text + " " + textSurname.Text || item == textName.Text.ToLower() + " " + textSurname.Text.ToLower() || item == textName.Text.ToUpper() + " " + textSurname.Text.ToUpper())
+                {
+                    exists = true;
+                    break;
+                }
+            }
+
+            if (exists)
+            {
+                MessageBox.Show("El nombre y apellido ingresado ya existe en la lista", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             listBoxEj2.Items.Add(textName.Text + " " + textSurname.Text);
             OrdenarListBoxAlfabeticamente();
             textName.Clear();
