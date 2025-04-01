@@ -16,5 +16,25 @@ namespace TP1___Programacion_III
         {
             InitializeComponent();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxsexo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
