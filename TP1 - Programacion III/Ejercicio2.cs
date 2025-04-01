@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace TP1___Programacion_III
 {
     public partial class Ejercicio2 : Form
     {
-        public Ejercicio2( FormPrincipal formPrincipal )
+        public Ejercicio2(FormPrincipal formPrincipal)
         {
             InitializeComponent();
         }
@@ -29,13 +28,26 @@ namespace TP1___Programacion_III
 
         private void Ejercicio2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormPrincipal formPrincipal = new FormPrincipal(); // Crea una instancia del formulario principal
-            formPrincipal.Show(); // Muestra el formulario principal
+            FormPrincipal formPrincipal = new FormPrincipal();
+            formPrincipal.Show();
         }
 
         private void btnAgregarEj2_Click(object sender, EventArgs e)
         {
-            
+            // Validacion de campos vacios
+            if (string.IsNullOrWhiteSpace(textName.Text))
+            {
+                MessageBox.Show("Debe ingresar un nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textName.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textSurname.Text))
+            {
+                MessageBox.Show("Debe ingresar un apellido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textSurname.Focus();
+                return;
+            }
 
             listBoxEj2.Items.Add(textName.Text + " " + textSurname.Text);
             OrdenarListBoxAlfabeticamente();
@@ -45,32 +57,25 @@ namespace TP1___Programacion_III
 
         private void OrdenarListBoxAlfabeticamente()
         {
-            List<String> Items = new List<string>();
+            List<string> Items = new List<string>();
 
-            foreach(String Item in listBoxEj2.Items)
+            foreach (string Item in listBoxEj2.Items)
             {
                 Items.Add(Item);
-
             }
 
-            //ordenar la Lista alfabeticamente
             Items.Sort();
 
             listBoxEj2.Items.Clear();
 
-            foreach (String Item in Items)
+            foreach (string Item in Items)
             {
                 listBoxEj2.Items.Add(Item);
             }
-
-            
-
-
         }
 
         private void listBoxEj2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
 
         }
 
@@ -92,6 +97,5 @@ namespace TP1___Programacion_III
                 MessageBox.Show("Por favor, selecciona un elemento para eliminar.");
             }
         }
-
     }
 }
