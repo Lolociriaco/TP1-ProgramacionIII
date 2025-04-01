@@ -28,21 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.checkBoxCasado = new System.Windows.Forms.CheckBox();
+            this.groupBoxsexo = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxmujer = new System.Windows.Forms.CheckBox();
+            this.checkBoxsoltero = new System.Windows.Forms.CheckBox();
+            this.groupBoxEstCivil = new System.Windows.Forms.GroupBox();
+            this.groupBoxsexo.SuspendLayout();
+            this.groupBoxEstCivil.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // checkBoxCasado
+            // 
+            this.checkBoxCasado.AutoSize = true;
+            this.checkBoxCasado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxCasado.Location = new System.Drawing.Point(20, 93);
+            this.checkBoxCasado.Name = "checkBoxCasado";
+            this.checkBoxCasado.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxCasado.TabIndex = 3;
+            this.checkBoxCasado.Text = "Casado";
+            this.checkBoxCasado.UseVisualStyleBackColor = false;
+            this.checkBoxCasado.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // groupBoxsexo
+            // 
+            this.groupBoxsexo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxsexo.Controls.Add(this.checkBoxmujer);
+            this.groupBoxsexo.Controls.Add(this.checkBox1);
+            this.groupBoxsexo.Location = new System.Drawing.Point(199, 155);
+            this.groupBoxsexo.Name = "groupBoxsexo";
+            this.groupBoxsexo.Size = new System.Drawing.Size(316, 141);
+            this.groupBoxsexo.TabIndex = 5;
+            this.groupBoxsexo.TabStop = false;
+            this.groupBoxsexo.Text = "Sexo";
+            this.groupBoxsexo.Enter += new System.EventHandler(this.groupBoxsexo_Enter);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(16, 93);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(106, 24);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Masculino";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxmujer
+            // 
+            this.checkBoxmujer.AutoSize = true;
+            this.checkBoxmujer.BackColor = System.Drawing.Color.White;
+            this.checkBoxmujer.Location = new System.Drawing.Point(16, 41);
+            this.checkBoxmujer.Name = "checkBoxmujer";
+            this.checkBoxmujer.Size = new System.Drawing.Size(106, 24);
+            this.checkBoxmujer.TabIndex = 1;
+            this.checkBoxmujer.Text = "Femenino";
+            this.checkBoxmujer.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxsoltero
+            // 
+            this.checkBoxsoltero.AutoSize = true;
+            this.checkBoxsoltero.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxsoltero.Location = new System.Drawing.Point(20, 41);
+            this.checkBoxsoltero.Name = "checkBoxsoltero";
+            this.checkBoxsoltero.Size = new System.Drawing.Size(86, 24);
+            this.checkBoxsoltero.TabIndex = 2;
+            this.checkBoxsoltero.Text = "Soltero";
+            this.checkBoxsoltero.UseVisualStyleBackColor = false;
+            // 
+            // groupBoxEstCivil
+            // 
+            this.groupBoxEstCivil.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxEstCivil.Controls.Add(this.checkBoxsoltero);
+            this.groupBoxEstCivil.Controls.Add(this.checkBoxCasado);
+            this.groupBoxEstCivil.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBoxEstCivil.Location = new System.Drawing.Point(705, 155);
+            this.groupBoxEstCivil.Name = "groupBoxEstCivil";
+            this.groupBoxEstCivil.Size = new System.Drawing.Size(334, 141);
+            this.groupBoxEstCivil.TabIndex = 6;
+            this.groupBoxEstCivil.TabStop = false;
+            this.groupBoxEstCivil.Text = "Estado civil";
             // 
             // Ejercicio3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.groupBoxEstCivil);
+            this.Controls.Add(this.groupBoxsexo);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Ejercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
+            this.Text = "S";
+            this.groupBoxsexo.ResumeLayout(false);
+            this.groupBoxsexo.PerformLayout();
+            this.groupBoxEstCivil.ResumeLayout(false);
+            this.groupBoxEstCivil.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        private System.Windows.Forms.CheckBox checkBoxCasado;
+        private System.Windows.Forms.GroupBox groupBoxsexo;
+        private System.Windows.Forms.CheckBox checkBoxmujer;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxsoltero;
+        private System.Windows.Forms.GroupBox groupBoxEstCivil;
     }
 }
