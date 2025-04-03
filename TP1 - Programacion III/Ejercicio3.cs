@@ -52,6 +52,18 @@ namespace TP1___Programacion_III
         private void button1_Click(object sender, EventArgs e)
         {
 
+            String sexo;
+
+            if (checkBoxmujer.Checked)
+            {
+                sexo="Femenino";
+            }
+            else
+            {
+                sexo = "Masculino";
+            }
+            mostrarSexo.Text = "El sexo seleccionado es: " + sexo;
+
         }
     }
 }

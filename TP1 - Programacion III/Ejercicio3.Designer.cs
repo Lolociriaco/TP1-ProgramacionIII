@@ -36,6 +36,11 @@
             this.groupBoxEstCivil = new System.Windows.Forms.GroupBox();
             this.checkedRoles = new System.Windows.Forms.CheckedListBox();
             this.btnMostrarSeleccion = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelMostrarSeleccionado = new System.Windows.Forms.Label();
+            this.mostrarSexo = new System.Windows.Forms.Label();
             this.groupBoxsexo.SuspendLayout();
             this.groupBoxEstCivil.SuspendLayout();
             this.SuspendLayout();
@@ -131,7 +136,7 @@
             "Programador",
             "Reparador de PC",
             "Tester"});
-            this.checkedRoles.Location = new System.Drawing.Point(306, 172);
+            this.checkedRoles.Location = new System.Drawing.Point(306, 127);
             this.checkedRoles.Name = "checkedRoles";
             this.checkedRoles.Size = new System.Drawing.Size(160, 79);
             this.checkedRoles.TabIndex = 7;
@@ -140,7 +145,7 @@
             // 
             this.btnMostrarSeleccion.BackColor = System.Drawing.Color.DimGray;
             this.btnMostrarSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarSeleccion.Location = new System.Drawing.Point(271, 282);
+            this.btnMostrarSeleccion.Location = new System.Drawing.Point(274, 229);
             this.btnMostrarSeleccion.Name = "btnMostrarSeleccion";
             this.btnMostrarSeleccion.Size = new System.Drawing.Size(228, 23);
             this.btnMostrarSeleccion.TabIndex = 8;
@@ -148,12 +153,65 @@
             this.btnMostrarSeleccion.UseVisualStyleBackColor = false;
             this.btnMostrarSeleccion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
+            // 
+            // labelMostrarSeleccionado
+            // 
+            this.labelMostrarSeleccionado.AutoSize = true;
+            this.labelMostrarSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMostrarSeleccionado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelMostrarSeleccionado.Location = new System.Drawing.Point(187, 272);
+            this.labelMostrarSeleccionado.Name = "labelMostrarSeleccionado";
+            this.labelMostrarSeleccionado.Size = new System.Drawing.Size(336, 18);
+            this.labelMostrarSeleccionado.TabIndex = 14;
+            this.labelMostrarSeleccionado.Text = "Usted selecciono los siguientes elementos:";
+            // 
+            // mostrarSexo
+            // 
+            this.mostrarSexo.AutoSize = true;
+            this.mostrarSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarSexo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.mostrarSexo.Location = new System.Drawing.Point(138, 310);
+            this.mostrarSexo.Name = "mostrarSexo";
+            this.mostrarSexo.Size = new System.Drawing.Size(0, 18);
+            this.mostrarSexo.TabIndex = 15;
+            // 
             // Ejercicio3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mostrarSexo);
+            this.Controls.Add(this.labelMostrarSeleccionado);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMostrarSeleccion);
             this.Controls.Add(this.checkedRoles);
             this.Controls.Add(this.groupBoxEstCivil);
@@ -166,6 +224,7 @@
             this.groupBoxEstCivil.ResumeLayout(false);
             this.groupBoxEstCivil.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,5 +237,10 @@
         private System.Windows.Forms.GroupBox groupBoxEstCivil;
         private System.Windows.Forms.CheckedListBox checkedRoles;
         private System.Windows.Forms.Button btnMostrarSeleccion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelMostrarSeleccionado;
+        private System.Windows.Forms.Label mostrarSexo;
     }
 }
