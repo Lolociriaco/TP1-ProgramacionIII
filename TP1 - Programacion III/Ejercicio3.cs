@@ -15,8 +15,8 @@ namespace TP1___Programacion_III
         public Ejercicio3( FormPrincipal formPrincipal )
         {
             InitializeComponent();
-            checkBoxmujer.Checked = true; // Marcar el checkbox en femenino al iniciar
-            checkBoxCasado.Checked = true; // Marcar el checkbox en casado al iniciar
+            //casado.Checked = true; // Marcar el checkbox en femenino al iniciar
+            //femenino.Checked = true; // Marcar el checkbox en casado al iniciar
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -52,17 +52,24 @@ namespace TP1___Programacion_III
         private void button1_Click(object sender, EventArgs e)
         {
 
-            String sexo;
+            String sexo = femenino.Checked ? "Femenino" : "Masculino"; 
+            String estadoCivil = casado.Checked ? "Casado" : "Soltero";
+            String roles = "";
 
-            if (checkBoxmujer.Checked)
+            foreach(object item in checkedRoles.CheckedItems)
             {
-                sexo="Femenino";
+                roles += "   " + item.ToString() + "\n";
             }
-            else
-            {
-                sexo = "Masculino";
-            }
-            mostrarSexo.Text = "El sexo seleccionado es: " + sexo;
+
+
+            mostrarSexo.Text = "El sexo seleccionado fue: " + sexo;
+            mostrarEstadoCivil.Text = "El estado civil seleccionado fue: " + estadoCivil;
+            mostrarRoles.Text = "Oficio: \n" + roles;
+
+        }
+
+        private void Ejercicio3_Load(object sender, EventArgs e)
+        {
 
         }
     }

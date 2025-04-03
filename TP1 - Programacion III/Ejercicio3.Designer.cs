@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBoxCasado = new System.Windows.Forms.CheckBox();
-            this.groupBoxsexo = new System.Windows.Forms.GroupBox();
-            this.checkBoxmujer = new System.Windows.Forms.CheckBox();
-            this.checkBoxMasculino = new System.Windows.Forms.CheckBox();
-            this.checkBoxsoltero = new System.Windows.Forms.CheckBox();
+            this.groupBoxSex = new System.Windows.Forms.GroupBox();
             this.groupBoxEstCivil = new System.Windows.Forms.GroupBox();
             this.checkedRoles = new System.Windows.Forms.CheckedListBox();
             this.btnMostrarSeleccion = new System.Windows.Forms.Button();
@@ -41,81 +37,37 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelMostrarSeleccionado = new System.Windows.Forms.Label();
             this.mostrarSexo = new System.Windows.Forms.Label();
-            this.groupBoxsexo.SuspendLayout();
+            this.femenino = new System.Windows.Forms.RadioButton();
+            this.masculino = new System.Windows.Forms.RadioButton();
+            this.soltero = new System.Windows.Forms.RadioButton();
+            this.casado = new System.Windows.Forms.RadioButton();
+            this.mostrarEstadoCivil = new System.Windows.Forms.Label();
+            this.mostrarRoles = new System.Windows.Forms.Label();
+            this.groupBoxSex.SuspendLayout();
             this.groupBoxEstCivil.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBoxCasado
+            // groupBoxSex
             // 
-            this.checkBoxCasado.AutoSize = true;
-            this.checkBoxCasado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBoxCasado.Location = new System.Drawing.Point(13, 27);
-            this.checkBoxCasado.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.checkBoxCasado.Name = "checkBoxCasado";
-            this.checkBoxCasado.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxCasado.TabIndex = 3;
-            this.checkBoxCasado.Text = "Casado";
-            this.checkBoxCasado.UseVisualStyleBackColor = false;
-            this.checkBoxCasado.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // groupBoxsexo
-            // 
-            this.groupBoxsexo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBoxsexo.Controls.Add(this.checkBoxmujer);
-            this.groupBoxsexo.Controls.Add(this.checkBoxMasculino);
-            this.groupBoxsexo.Location = new System.Drawing.Point(67, 53);
-            this.groupBoxsexo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.groupBoxsexo.Name = "groupBoxsexo";
-            this.groupBoxsexo.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.groupBoxsexo.Size = new System.Drawing.Size(211, 92);
-            this.groupBoxsexo.TabIndex = 5;
-            this.groupBoxsexo.TabStop = false;
-            this.groupBoxsexo.Text = "Sexo";
-            this.groupBoxsexo.Enter += new System.EventHandler(this.groupBoxsexo_Enter);
-            // 
-            // checkBoxmujer
-            // 
-            this.checkBoxmujer.AutoSize = true;
-            this.checkBoxmujer.BackColor = System.Drawing.Color.White;
-            this.checkBoxmujer.Location = new System.Drawing.Point(11, 27);
-            this.checkBoxmujer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.checkBoxmujer.Name = "checkBoxmujer";
-            this.checkBoxmujer.Size = new System.Drawing.Size(72, 17);
-            this.checkBoxmujer.TabIndex = 1;
-            this.checkBoxmujer.Text = "Femenino";
-            this.checkBoxmujer.UseVisualStyleBackColor = false;
-            // 
-            // checkBoxMasculino
-            // 
-            this.checkBoxMasculino.AutoSize = true;
-            this.checkBoxMasculino.BackColor = System.Drawing.Color.White;
-            this.checkBoxMasculino.Location = new System.Drawing.Point(11, 60);
-            this.checkBoxMasculino.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.checkBoxMasculino.Name = "checkBoxMasculino";
-            this.checkBoxMasculino.Size = new System.Drawing.Size(74, 17);
-            this.checkBoxMasculino.TabIndex = 0;
-            this.checkBoxMasculino.Text = "Masculino";
-            this.checkBoxMasculino.UseVisualStyleBackColor = false;
-            this.checkBoxMasculino.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxsoltero
-            // 
-            this.checkBoxsoltero.AutoSize = true;
-            this.checkBoxsoltero.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBoxsoltero.Location = new System.Drawing.Point(13, 53);
-            this.checkBoxsoltero.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.checkBoxsoltero.Name = "checkBoxsoltero";
-            this.checkBoxsoltero.Size = new System.Drawing.Size(59, 17);
-            this.checkBoxsoltero.TabIndex = 2;
-            this.checkBoxsoltero.Text = "Soltero";
-            this.checkBoxsoltero.UseVisualStyleBackColor = false;
-            this.checkBoxsoltero.CheckedChanged += new System.EventHandler(this.checkBoxsoltero_CheckedChanged);
+            this.groupBoxSex.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxSex.Controls.Add(this.masculino);
+            this.groupBoxSex.Controls.Add(this.femenino);
+            this.groupBoxSex.Location = new System.Drawing.Point(67, 53);
+            this.groupBoxSex.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBoxSex.Name = "groupBoxSex";
+            this.groupBoxSex.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.groupBoxSex.Size = new System.Drawing.Size(211, 92);
+            this.groupBoxSex.TabIndex = 5;
+            this.groupBoxSex.TabStop = false;
+            this.groupBoxSex.Tag = "";
+            this.groupBoxSex.Text = "Sexo";
+            this.groupBoxSex.Enter += new System.EventHandler(this.groupBoxsexo_Enter);
             // 
             // groupBoxEstCivil
             // 
             this.groupBoxEstCivil.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBoxEstCivil.Controls.Add(this.checkBoxsoltero);
-            this.groupBoxEstCivil.Controls.Add(this.checkBoxCasado);
+            this.groupBoxEstCivil.Controls.Add(this.casado);
+            this.groupBoxEstCivil.Controls.Add(this.soltero);
             this.groupBoxEstCivil.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBoxEstCivil.Location = new System.Drawing.Point(497, 53);
             this.groupBoxEstCivil.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -136,7 +88,7 @@
             "Programador",
             "Reparador de PC",
             "Tester"});
-            this.checkedRoles.Location = new System.Drawing.Point(306, 127);
+            this.checkedRoles.Location = new System.Drawing.Point(308, 73);
             this.checkedRoles.Name = "checkedRoles";
             this.checkedRoles.Size = new System.Drawing.Size(160, 79);
             this.checkedRoles.TabIndex = 7;
@@ -145,7 +97,7 @@
             // 
             this.btnMostrarSeleccion.BackColor = System.Drawing.Color.DimGray;
             this.btnMostrarSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarSeleccion.Location = new System.Drawing.Point(274, 229);
+            this.btnMostrarSeleccion.Location = new System.Drawing.Point(276, 175);
             this.btnMostrarSeleccion.Name = "btnMostrarSeleccion";
             this.btnMostrarSeleccion.Size = new System.Drawing.Size(228, 23);
             this.btnMostrarSeleccion.TabIndex = 8;
@@ -185,7 +137,7 @@
             this.labelMostrarSeleccionado.AutoSize = true;
             this.labelMostrarSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMostrarSeleccionado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelMostrarSeleccionado.Location = new System.Drawing.Point(187, 272);
+            this.labelMostrarSeleccionado.Location = new System.Drawing.Point(221, 216);
             this.labelMostrarSeleccionado.Name = "labelMostrarSeleccionado";
             this.labelMostrarSeleccionado.Size = new System.Drawing.Size(336, 18);
             this.labelMostrarSeleccionado.TabIndex = 14;
@@ -194,12 +146,79 @@
             // mostrarSexo
             // 
             this.mostrarSexo.AutoSize = true;
+            this.mostrarSexo.BackColor = System.Drawing.Color.Black;
             this.mostrarSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mostrarSexo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.mostrarSexo.Location = new System.Drawing.Point(138, 310);
+            this.mostrarSexo.Location = new System.Drawing.Point(205, 260);
             this.mostrarSexo.Name = "mostrarSexo";
             this.mostrarSexo.Size = new System.Drawing.Size(0, 18);
             this.mostrarSexo.TabIndex = 15;
+            // 
+            // femenino
+            // 
+            this.femenino.AutoSize = true;
+            this.femenino.Location = new System.Drawing.Point(11, 26);
+            this.femenino.Name = "femenino";
+            this.femenino.Size = new System.Drawing.Size(71, 17);
+            this.femenino.TabIndex = 16;
+            this.femenino.TabStop = true;
+            this.femenino.Text = "Femenino";
+            this.femenino.UseVisualStyleBackColor = true;
+            // 
+            // masculino
+            // 
+            this.masculino.AutoSize = true;
+            this.masculino.Location = new System.Drawing.Point(11, 53);
+            this.masculino.Name = "masculino";
+            this.masculino.Size = new System.Drawing.Size(73, 17);
+            this.masculino.TabIndex = 17;
+            this.masculino.TabStop = true;
+            this.masculino.Text = "Masculino";
+            this.masculino.UseVisualStyleBackColor = true;
+            // 
+            // soltero
+            // 
+            this.soltero.AutoSize = true;
+            this.soltero.Location = new System.Drawing.Point(15, 53);
+            this.soltero.Name = "soltero";
+            this.soltero.Size = new System.Drawing.Size(58, 17);
+            this.soltero.TabIndex = 4;
+            this.soltero.TabStop = true;
+            this.soltero.Text = "Soltero";
+            this.soltero.UseVisualStyleBackColor = true;
+            // 
+            // casado
+            // 
+            this.casado.AutoSize = true;
+            this.casado.Location = new System.Drawing.Point(15, 30);
+            this.casado.Name = "casado";
+            this.casado.Size = new System.Drawing.Size(61, 17);
+            this.casado.TabIndex = 5;
+            this.casado.TabStop = true;
+            this.casado.Text = "Casado";
+            this.casado.UseVisualStyleBackColor = true;
+            // 
+            // mostrarEstadoCivil
+            // 
+            this.mostrarEstadoCivil.AutoSize = true;
+            this.mostrarEstadoCivil.BackColor = System.Drawing.Color.Black;
+            this.mostrarEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarEstadoCivil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.mostrarEstadoCivil.Location = new System.Drawing.Point(205, 300);
+            this.mostrarEstadoCivil.Name = "mostrarEstadoCivil";
+            this.mostrarEstadoCivil.Size = new System.Drawing.Size(0, 18);
+            this.mostrarEstadoCivil.TabIndex = 16;
+            // 
+            // mostrarRoles
+            // 
+            this.mostrarRoles.AutoSize = true;
+            this.mostrarRoles.BackColor = System.Drawing.Color.Black;
+            this.mostrarRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarRoles.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.mostrarRoles.Location = new System.Drawing.Point(205, 336);
+            this.mostrarRoles.Name = "mostrarRoles";
+            this.mostrarRoles.Size = new System.Drawing.Size(0, 18);
+            this.mostrarRoles.TabIndex = 17;
             // 
             // Ejercicio3
             // 
@@ -207,6 +226,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mostrarRoles);
+            this.Controls.Add(this.mostrarEstadoCivil);
             this.Controls.Add(this.mostrarSexo);
             this.Controls.Add(this.labelMostrarSeleccionado);
             this.Controls.Add(this.label3);
@@ -215,12 +236,13 @@
             this.Controls.Add(this.btnMostrarSeleccion);
             this.Controls.Add(this.checkedRoles);
             this.Controls.Add(this.groupBoxEstCivil);
-            this.Controls.Add(this.groupBoxsexo);
+            this.Controls.Add(this.groupBoxSex);
             this.Name = "Ejercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio 3";
-            this.groupBoxsexo.ResumeLayout(false);
-            this.groupBoxsexo.PerformLayout();
+            this.Load += new System.EventHandler(this.Ejercicio3_Load);
+            this.groupBoxSex.ResumeLayout(false);
+            this.groupBoxSex.PerformLayout();
             this.groupBoxEstCivil.ResumeLayout(false);
             this.groupBoxEstCivil.PerformLayout();
             this.ResumeLayout(false);
@@ -229,11 +251,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox checkBoxCasado;
-        private System.Windows.Forms.GroupBox groupBoxsexo;
-        private System.Windows.Forms.CheckBox checkBoxmujer;
-        private System.Windows.Forms.CheckBox checkBoxMasculino;
-        private System.Windows.Forms.CheckBox checkBoxsoltero;
         private System.Windows.Forms.GroupBox groupBoxEstCivil;
         private System.Windows.Forms.CheckedListBox checkedRoles;
         private System.Windows.Forms.Button btnMostrarSeleccion;
@@ -242,5 +259,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMostrarSeleccionado;
         private System.Windows.Forms.Label mostrarSexo;
+        private System.Windows.Forms.RadioButton femenino;
+        private System.Windows.Forms.GroupBox groupBoxSex;
+        private System.Windows.Forms.RadioButton masculino;
+        private System.Windows.Forms.RadioButton casado;
+        private System.Windows.Forms.RadioButton soltero;
+        private System.Windows.Forms.Label mostrarEstadoCivil;
+        private System.Windows.Forms.Label mostrarRoles;
     }
 }
