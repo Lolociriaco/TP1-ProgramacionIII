@@ -47,28 +47,52 @@ namespace TP1___Programacion_III
 
         }
 
+        private bool oficiosMostrados = false;
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (oficiosMostrados)
+            {
+                MessageBox.Show("Ya has mostrado los oficios.",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
 
-            String sexo = femenino.Checked ? "Femenino" : "Masculino"; 
+            String sexo = femenino.Checked ? "Femenino" : "Masculino";
             String estadoCivil = casado.Checked ? "Casado" : "Soltero";
             String roles = "";
 
-            foreach(object item in checkedRoles.CheckedItems)
+            
+
+            if (checkedRoles.CheckedItems.Count == 0)
             {
-                roles += "   " + item.ToString() + "\n";
+                MessageBox.Show("Debes seleccionar al menos un oficio.",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
             }
-
-
-            mostrarSexo.Text = "Sexo: " + sexo;
-            mostrarEstadoCivil.Text = "Estado Civil: " + estadoCivil;
-
-            mostrarRoles.Text += "\nOficio:";
-            foreach (object item in checkedRoles.CheckedItems)
+            else 
             {
-                mostrarRoles.Text += "\n" + "  -" + item.ToString();
-            }
+                foreach (object item in checkedRoles.CheckedItems)
+                {
+                    roles += "   " + item.ToString() + "\n";
+                }
 
+                mostrarSexo.Text = "Sexo: " + sexo;
+                mostrarEstadoCivil.Text = "Estado Civil: " + estadoCivil;
+
+                mostrarRoles.Text += "\nOficio:";
+                foreach (object item in checkedRoles.CheckedItems)
+                {
+                    mostrarRoles.Text += "\n" + "  -" + item.ToString();
+                }
+            }
+           
+
+            oficiosMostrados = true;
         }
 
         private void Ejercicio3_Load(object sender, EventArgs e)
